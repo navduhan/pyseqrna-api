@@ -1,10 +1,12 @@
 {
-  "name": "pyseqrna_api",
+  "name": "pyseqrna-api",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "update": "git pull origin main && npm i && pm2 restart pyseqrna-api"
+
   },
   "keywords": [],
   "author": "",
