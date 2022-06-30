@@ -18,7 +18,7 @@ const swaggerOptions = {
         contact: {
           name: "Naveen Duhan"
         },
-        servers: [{url:"http://localhost:3810",},]
+        servers: [{url:"http://bioinfo.usu.edu/pyseqrna-api/",},]
       }
     },
     apis: ["./src/routes/pyseqrna_routes.js"],
