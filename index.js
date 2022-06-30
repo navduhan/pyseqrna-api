@@ -5,7 +5,7 @@ const swaggerJsDoc = require("swagger-jsdoc");
 const swaggerUi = require("swagger-ui-express");
 
 const app = express()
-const apiPort = 3810
+const apiPort = 3800
 const routes =require('./src/routes/pyseqrna_routes')
 
 
@@ -18,7 +18,7 @@ const swaggerOptions = {
         contact: {
           name: "Naveen Duhan"
         },
-        servers: [{url:"http://localhost:4000",},]
+        servers: [{url:"http://localhost:3810",},]
       }
     },
     apis: ["./src/routes/pyseqrna_routes.js"],
