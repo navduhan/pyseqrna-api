@@ -30,10 +30,10 @@ router.route("/list/pathways").get(async(req,res)=>{
     let path= [];
 
     results.map((data, index)=>{
-        path.push(`${ data._id.pathway_id}&emsp;${data._id.pathway_description}`)
+        path.push(`${ data._id.pathway_id}\t${data._id.pathway_description}`)
     })
 
-    const data = `<html><body><pre>${path.join("\n")}</pre></body></html>`
+    const data = `<pre>${path.join("\n")}</pre>`
     
     res.send(data)
 })
@@ -47,10 +47,12 @@ router.route("/list/pathways/:species").get(async(req,res)=>{
     let path= [];
 
     results.map((data, index)=>{
-        path.push(`${ data.species}&emsp;${ data.ensembl_gene}&emsp;${ data.pathway_id}&emsp;${data.pathway_description}`)
+        path.push(`${ data.species}\t${ data.ensembl_gene}\t${ data.pathway_id}\t${data.pathway_description}`)
     })
 
-    const data = `<html><body><pre>${path.join("\n")}</pre></body></html>`
+    const data = `<pre>${path.join("\n")}</pre>`
+
+    
     
     res.send(data)
 })
