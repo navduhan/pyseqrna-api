@@ -61,7 +61,7 @@ router.route("/list/species").get(async(req,res)=>{
 
     let species = req.params.species
 
-    await pathways['ensembl_pathway'].aggregate( 
+    let results = await pathways['ensembl_pathway'].aggregate( 
         [
             {$group: { "_id": { species: "$species", species_abbr: "$species_abbr" } } }
         ]
