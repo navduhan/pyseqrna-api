@@ -57,6 +57,28 @@ router.route("/list/pathways/:species").get(async(req,res)=>{
     res.send(data)
 })
 
+router.route("/list/species").get(async(req,res)=>{
+
+    let species = req.params.species
+
+    await pathways['ensembl_pathway'].aggregate( 
+        [
+            {$group: { "_id": { species: "$species", species_abbr: "$species_abbr" } } }
+        ]
+    )
+
+    let path= [];
+
+    results.map((data, index)=>{
+        path.push(`${ data._id.species}\t${data._id.species_abbr}`)
+    })
+
+    const data = `<pre>${path.join("\n")}</pre>`
+    
+    res.send(data)
+})
+
+
 
 
 
