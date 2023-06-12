@@ -15,6 +15,11 @@ router.route("/").get((req, res)=>{
              <code>https://bioinfo.usu.edu/api-pyseqrna/list/species </code>
              <h4>Check available pathways </h4>
              <code>https://bioinfo.usu.edu/api-pyseqrna/list/pathways</code>
+             <h4>Get pathways for a species </h4>
+             <p>write species scientific name as example: <br>
+             For example <i>Arabidopsis thaliana</i> name is written as <b>athaliana</b>
+             </p>
+             <code>https://bioinfo.usu.edu/api-pyseqrna/list/pathways/athaliana</code>
              
              </body></html>`)
 })
