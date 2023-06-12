@@ -8,7 +8,13 @@ const pathways = require("../models/models");
 
 
 router.route("/").get((req, res)=>{
-    res.send("<html><title>pySeqRNA-API</title><body><h3>Welcome to pySeqRNA Functional Annotation API</h3></body></html>")
+    res.send(`<html><title>pySeqRNA-API</title>
+             
+             <body><h3>Welcome to pySeqRNA Functional Annotation API</h3>
+             <h4>Check available species </h4>
+             <code>https://bioinfo.usu.edu/api-pyseqrna/list/species </code>
+             
+             </body></html>`)
 })
 
 /**
