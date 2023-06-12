@@ -13,6 +13,8 @@ router.route("/").get((req, res)=>{
              <body><h3>Welcome to pySeqRNA Functional Annotation API</h3>
              <h4>Check available species </h4>
              <code>https://bioinfo.usu.edu/api-pyseqrna/list/species </code>
+             <h4>Check available pathways </h4>
+             <code>https://bioinfo.usu.edu/api-pyseqrna/list/pathways</code>
              
              </body></html>`)
 })
