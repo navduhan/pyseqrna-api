@@ -18,7 +18,10 @@ const swaggerOptions = {
         contact: {
           name: "Naveen Duhan"
         },
-        servers: [{url:"http://bioinfo.usu.edu/",},]
+        servers: [
+        { url: "http://bioinfo.usu.edu/" },
+        { url: "https://kaabil.net" }
+      ]
       }
     },
     apis: ["./src/routes/pyseqrna_routes.js"],
